@@ -148,6 +148,28 @@ What is in this alpha:
    - Then use "Add to InfiniteLeaf" on your project copy. The original folder is left untouched.
 6. If you want, set a page limit or main file in `.infiniteleaf/settings.json` (see section 7), then reopen the project.
 
+### Automatic sync with Overleaf every few seconds
+Set this up once per project. Both directions are off until you turn them on.
+1. **Link the project.** Start screen ▸ **Open from Overleaf…** (token, history folder, project address).
+2. **Allow pushing.** New links never push. Click the **Overleaf** chip in the top bar to open the sync
+   panel, then **Allow pushing**.
+3. **Choose how often.** In the same panel, **Sync with Overleaf every**: 1 second to 5 minutes
+   (default 5 minutes). Short intervals apply only while the InfiniteLeaf window is in front; in the
+   background it checks once a minute. Below 15 seconds Overleaf may ask the app to slow down, and the
+   panel then says "Overleaf asked us to slow down · next try …".
+4. **Bring coauthors' edits in.** Tick **Apply Overleaf changes automatically**.
+5. **Send your edits out.** Tick **Send my edits to Overleaf automatically**. Your edits go once you
+   have stopped typing for 10 seconds (or the interval, if longer). The app always takes Overleaf's
+   latest changes first, merges, then sends.
+6. **What waits for you.** Renaming or moving a file, reformatting a whole file, rewriting more than
+   30 % of a file at once, and deleting a file on Overleaf are not sent automatically. The panel says
+   "needs a look"; press **Review and push** for those. Everything else goes out on its own, as it would
+   in Overleaf's editor.
+7. **Offline.** Edits wait and go out, after a merge, once you are back online.
+
+The panel's header shows "Live · every N s" while this is on. Comments in the margin are separate:
+Settings ▸ Connections ▸ Overleaf.
+
 ## 5. Please try
 Each item: action, then what you should see. Tell us if anything differs.
 1. **Compile.** Open a copy of your paper, press Mod+Enter. The PDF appears; the header shows the Logs count and a page-count chip.
