@@ -4,7 +4,7 @@ This is the first collaborator release of this open access Latex/Overleaf API to
 
 ## 1. Definition
 InfiniteLeaf is a local, Overleaf-like LaTeX editor: your files stay in a folder on
-your disk, and it compiles with your own TeX install. This is the first internal alpha, unsigned,for a small group of colleagues. Expect rough edges, and please report them. These instructions are mostly written by Claude.
+your disk, and it compiles with your own TeX install. This is the first internal alpha, unsigned, for a small group of colleagues. Expect rough edges, and please report them. These instructions are mostly written by Claude.
 
 **Downloads** (from the prerelease on the private `infiniteleaf-alpha` GitHub repo):
 
