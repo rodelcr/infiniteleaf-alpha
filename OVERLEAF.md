@@ -72,13 +72,26 @@ The panel's header shows "Live · every N s" while this is on.
 - **History with Overleaf**: Overleaf's versions and labels next to your own, labels on any earlier
   version (also on Overleaf when the version matches exactly), compare with an Overleaf version.
 
-### Turn comments on
-Comments are off until you turn them on, in **Settings ▸ Connections ▸ Overleaf**:
-1. **Show Overleaf comments and suggestions** shows them in a margin beside your text, read-only.
-2. **Allow accepting, rejecting, resolving and replying on Overleaf from InfiniteLeaf** lets you act
-   on them (and add new comments). It needs the first switch on.
-
-Both use your overleaf.com sign-in. Overleaf's Git bridge does not carry comments, so these switches
-use Overleaf's own web interface instead. That is why the app labels them **unofficial**: Overleaf
-does not support this use, it may stop working whenever Overleaf changes its site, and Overleaf could
-restrict an account that uses it. Syncing your text does not depend on them.
+### Turn comments on, view, reply, resolve, accept
+For a project linked to Overleaf. Off until you turn it on.
+1. **Turn it on.** Settings ▸ Connections ▸ Overleaf: tick **Show Overleaf comments and suggestions**
+   to see them. To act on them too, also tick **Allow accepting, rejecting, resolving and replying on
+   Overleaf from InfiniteLeaf**. Both are marked unofficial: they use Overleaf's website, not its Git
+   bridge, and may stop working when Overleaf changes its site.
+2. **Sign in to overleaf.com once**, in the app's own window: Settings ▸ Connections ▸ Overleaf ▸
+   **Browse Overleaf…**. If you are not signed in, the margin says so and offers **Open Overleaf
+   review**; sign in there, then press **Check now**.
+3. **See the comments.** Click **Review** in the editor's file bar (or **Review** on the left rail).
+   A margin opens beside the text: **Current file** shows each comment level with the text it is on;
+   **Overview** lists every file's comments and suggestions (click one to jump there). **Check now**
+   reads Overleaf again; otherwise it refreshes with the sync interval.
+4. **Reply and resolve.** Click a comment's card: type in **Reply** (Enter sends, Shift+Enter is a new
+   line) or press **Resolve**. Resolved comments are under **Resolved (N)** at the bottom, with **Reopen**.
+5. **Suggestions (tracked changes).** Each one has **Accept** and **Reject**; a group has
+   **Accept all** / **Reject all**. A reject finishes with your next push.
+6. **New comment.** Select text in a `.tex` file: an **Add comment** button appears above it. Type the
+   comment and press **Comment**.
+7. **Track changes.** The **Editing ▾ / Reviewing ▾** switch in the file bar turns Overleaf's track
+   changes on or off, as in Overleaf.
+8. **Offline.** Actions you take offline wait ("Queued — sent when Overleaf answers") and go out when
+   Overleaf answers again.
