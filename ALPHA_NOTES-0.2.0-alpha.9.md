@@ -225,7 +225,10 @@ For a project linked to Overleaf. Off until you turn it on.
 2. **Sign in to overleaf.com once**, in the app's own window: Settings ▸ Connections ▸ Overleaf ▸
    **Browse Overleaf…**. If you are not signed in, the margin says so and offers **Open Overleaf
    review**; sign in there, then press **Check now**.
-3. **See the comments.** Click **Review** in the editor's file bar (or **Review** on the left rail).
+3. **See the comments.** Click **Review**. It is in the file bar above the editor, on the right; when
+   the window is narrow it is tucked under the **⋯** button (More file actions) at the right end of
+   that bar. **Review** on the left rail opens the same margin on its Overview tab. Both appear only
+   after step 1, and only in a project linked to Overleaf (alpha.10 will show them always).
    A margin opens beside the text: **Current file** shows each comment level with the text it is on;
    **Overview** lists every file's comments and suggestions (click one to jump there). **Check now**
    reads Overleaf again; otherwise it refreshes with the sync interval.
@@ -286,6 +289,7 @@ Each item: action, then what you should see. Tell us if anything differs.
 - A file with thousands of unclosed `{` switches the editor to basic highlighting ("Large or unusual file: using basic highlighting").
 - Detached PDF window: the app starts attached; a "no match" toast can cover the file bar for up to 4 s.
 - Export for arXiv checks against arXiv's published rules and test-compiles with your TeX Live, not arXiv's; always look at the PDF arXiv makes before announcing. Nothing is uploaded by the app.
+- The **Review** buttons (comments) are hidden until you turn comments on in Settings ▸ Connections ▸ Overleaf, and the file-bar one can sit under **⋯** (More file actions) in a narrow window. alpha.10 will show Review always, with a way to turn comments on from it.
 - Mendeley is not connected yet (planned for a later alpha). For now, export a `.bib` from Mendeley and add it to the project.
 - "Compare as PDF" and remote sync need git, latexdiff and a working network or reachable remote as appropriate.
 
