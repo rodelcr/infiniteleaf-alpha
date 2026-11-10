@@ -81,7 +81,10 @@ For a project linked to Overleaf. Off until you turn it on.
 2. **Sign in to overleaf.com once**, in the app's own window: Settings ▸ Connections ▸ Overleaf ▸
    **Browse Overleaf…**. If you are not signed in, the margin says so and offers **Open Overleaf
    review**; sign in there, then press **Check now**.
-3. **See the comments.** Click **Review** in the editor's file bar (or **Review** on the left rail).
+3. **See the comments.** Click **Review**. It is in the file bar above the editor, on the right; when
+   the window is narrow it is tucked under the **⋯** button (More file actions) at the right end of
+   that bar. **Review** on the left rail opens the same margin on its Overview tab. Both appear only
+   after step 1, and only in a project linked to Overleaf (alpha.10 will show them always).
    A margin opens beside the text: **Current file** shows each comment level with the text it is on;
    **Overview** lists every file's comments and suggestions (click one to jump there). **Check now**
    reads Overleaf again; otherwise it refreshes with the sync interval.
