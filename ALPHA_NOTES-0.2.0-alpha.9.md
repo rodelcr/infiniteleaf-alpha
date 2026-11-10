@@ -216,6 +216,30 @@ Settings ▸ Connections ▸ Overleaf. Linking a project, syncing by hand and co
 [Overleaf guide](https://github.com/rodelcr/infiniteleaf-alpha/blob/main/OVERLEAF.md). Zotero:
 [Zotero guide](https://github.com/rodelcr/infiniteleaf-alpha/blob/main/ZOTERO.md).
 
+### Overleaf comments: view, reply, resolve, accept
+For a project linked to Overleaf. Off until you turn it on.
+1. **Turn it on.** Settings ▸ Connections ▸ Overleaf: tick **Show Overleaf comments and suggestions**
+   to see them. To act on them too, also tick **Allow accepting, rejecting, resolving and replying on
+   Overleaf from InfiniteLeaf**. Both are marked unofficial: they use Overleaf's website, not its Git
+   bridge, and may stop working when Overleaf changes its site.
+2. **Sign in to overleaf.com once**, in the app's own window: Settings ▸ Connections ▸ Overleaf ▸
+   **Browse Overleaf…**. If you are not signed in, the margin says so and offers **Open Overleaf
+   review**; sign in there, then press **Check now**.
+3. **See the comments.** Click **Review** in the editor's file bar (or **Review** on the left rail).
+   A margin opens beside the text: **Current file** shows each comment level with the text it is on;
+   **Overview** lists every file's comments and suggestions (click one to jump there). **Check now**
+   reads Overleaf again; otherwise it refreshes with the sync interval.
+4. **Reply and resolve.** Click a comment's card: type in **Reply** (Enter sends, Shift+Enter is a new
+   line) or press **Resolve**. Resolved comments are under **Resolved (N)** at the bottom, with **Reopen**.
+5. **Suggestions (tracked changes).** Each one has **Accept** and **Reject**; a group has
+   **Accept all** / **Reject all**. A reject finishes with your next push.
+6. **New comment.** Select text in a `.tex` file: an **Add comment** button appears above it. Type the
+   comment and press **Comment**.
+7. **Track changes.** The **Editing ▾ / Reviewing ▾** switch in the file bar turns Overleaf's track
+   changes on or off, as in Overleaf.
+8. **Offline.** Actions you take offline wait ("Queued — sent when Overleaf answers") and go out when
+   Overleaf answers again.
+
 ## 5. Please try
 Each item: action, then what you should see. Tell us if anything differs.
 1. **Compile.** Open a copy of your paper, press ⌘+Enter. The PDF appears; the Recompile button shows the error and warning counts, and the first row of its ▾ menu shows the page count.
@@ -241,6 +265,7 @@ Each item: action, then what you should see. Tell us if anything differs.
 21. **Several projects.** File ▸ New Window (⌘N) and File ▸ New Tab (⌘T): open a second project in each. Quit and relaunch: both come back.
 22. **Download PDF.** Click ⤓ in the PDF toolbar. A save dialog in Downloads offers a copy named after the project.
 23. **Interface size.** With the pointer over the editor or the top bar, press ⌘+ and ⌘−: everything grows and shrinks; ⌘0 resets. Over the PDF the same keys zoom the PDF only.
+24. **Comments.** In a linked scratch project with comments on Overleaf, turn on both comment switches, open **Review**, reply to a comment and resolve another. Both show on Overleaf within a sync interval. Select a sentence ▸ **Add comment**: the comment appears on Overleaf.
 
 ## 6. Known gaps and limitations
 **Not in this alpha**
