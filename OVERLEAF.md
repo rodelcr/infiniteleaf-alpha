@@ -2,9 +2,9 @@
 
 <!-- Assembled 2026-11-10 from ALPHA_NOTES-0.2.0-alpha.8.md (verbatim; selection only).
      Sources: "What you need" = section 1 bullets "Overleaf sync" / "Overleaf comments and review";
-     steps 1-7 = section 4 "Automatic sync with Overleaf every few seconds".
+     steps 1-7 = section 4 "Automatic sync with Overleaf every few seconds" (step 2: "the **Overleaf** chip" corrected to "the sync button", 2026-11-10: the chip was merged into one sync button).
      "What you need", "Link a project" and "Turn comments on" written by Claude at Rodrigo's request
-     (2026-11-10, "you can write what we need as overviews"), from the app's own labels. -->
+     (2026-11-10, "you can write what we need as overviews"), from the app's own labels; "Sync by hand" added 2026-11-10. -->
 
 Open a project from Overleaf, bring coauthors' edits in, and send yours, automatically.
 
@@ -31,13 +31,24 @@ the one before is done.
    another project is already open). If the
    project is already in InfiniteLeaf, the dialog offers **Open it** instead of making a second copy.
 
-Your project is now a folder on your disk that follows Overleaf. The **Overleaf** chip in the top bar
-shows its state; click it for the sync panel.
+Your project is now a folder on your disk that follows Overleaf. The **sync button** in the top bar
+(it shows the state, for example "● synced") opens the sync panel.
+
+## Sync by hand
+Until you turn on automatic sync (below), you decide when things move. In the sync panel:
+1. **Check now** asks Overleaf for your coauthors' latest changes.
+2. **Apply changes from Overleaf** brings them into your copy. If you and a coauthor edited the same
+   lines, the app stops and shows the conflict instead of choosing for you.
+3. **Allow pushing** (once per project): new links only receive, so nothing of yours reaches Overleaf
+   until you allow it.
+4. **Review and push…** shows exactly what would be sent, file by file, with anything risky for
+   comments flagged (a renamed file, a whole-file reformat, a large rewrite). Leave files out if you
+   want, then push.
 
 ## Automatic sync with Overleaf every few seconds
 Set this up once per project. Both directions are off until you turn them on.
 1. **Link the project.** Projects screen ▸ **Open from Overleaf…** (token, history folder, project address).
-2. **Allow pushing.** New links never push. Click the **Overleaf** chip in the top bar to open the sync
+2. **Allow pushing.** New links never push. Click the sync button in the top bar to open the sync
    panel, then **Allow pushing**.
 3. **Choose how often.** In the same panel, **Sync with Overleaf every**: 1 second to 5 minutes
    (default 5 minutes). Short intervals apply only while the InfiniteLeaf window is in front; in the
