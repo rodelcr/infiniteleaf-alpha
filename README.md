@@ -40,5 +40,11 @@ your disk, and it compiles with your own TeX install.
 - **Safety and storage**
   - Exact, atomic saves; a "changed on disk" banner instead of silent overwrites.
 
+## How to establish version control for a project
+History is kept for projects in your InfiniteLeaf history folder (set up once with **Set up history…**). A project is in it when you:
+- create it with **New project…**,
+- open it with **Open from Overleaf…**, or
+- add an existing folder with **File ▸ Add to InfiniteLeaf…**. This copies the folder in and leaves the original untouched; keep working in the copy.
+
 ## Report a bug
 In the app: the bug icon at the bottom of the left sidebar. Or [open an issue](https://github.com/rodelcr/infiniteleaf-alpha/issues/new?labels=bug).
