@@ -8,6 +8,7 @@
 Which Mac do I have? Apple menu ▸ About This Mac: "Chip: Apple M…" is Apple Silicon.
 Install steps and what to try: [tester notes](ALPHA_NOTES-0.2.0-alpha.8.md).
 All releases: [Releases](https://github.com/rodelcr/infiniteleaf-alpha/releases).
+Connect to Overleaf: [Overleaf guide](OVERLEAF.md). Connect to Zotero: [Zotero guide](ZOTERO.md).
 
 ## Key features
 InfiniteLeaf is a local, Overleaf-like LaTeX editor: your files stay in a folder on
