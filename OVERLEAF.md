@@ -94,7 +94,10 @@ For a project linked to Overleaf. Off until you turn it on.
    **Accept all** / **Reject all**. A reject finishes with your next push.
 6. **New comment.** Select text in a `.tex` file: an **Add comment** button appears above it. Type the
    comment and press **Comment**.
-7. **Track changes.** The **Editing ▾ / Reviewing ▾** switch in the file bar turns Overleaf's track
-   changes on or off, as in Overleaf.
+7. **Suggesting (track changes).** The **Editing ▾ / Reviewing ▾** switch in the file bar turns
+   Overleaf's track changes on or off for you, as in Overleaf: in **Reviewing**, the edits you send to
+   Overleaf arrive there as suggestions your coauthors accept or reject. The switch shows only when **both** switches in step 1
+   are on **and** the project may push (sync panel ▸ **Allow pushing**; new links start read-only). Like
+   Review, it can be under **⋯** (More file actions) in a narrow window. alpha.10 will show it always.
 8. **Offline.** Actions you take offline wait ("Queued — sent when Overleaf answers") and go out when
    Overleaf answers again.
