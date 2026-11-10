@@ -42,7 +42,10 @@ is easiest. `git` is needed for version control; if macOS offers to install the 
   accept, **Allow accepting, rejecting, resolving and replying…**). Then click **Review** in the file
   bar above the editor. In a narrow window it is under the **⋯** button (More file actions) at the
   right end of that bar; **Review** on the left rail opens the overview. Both stay hidden until
-  comments are on (alpha.10 will show them always). Details: [Overleaf guide](OVERLEAF.md#comments-and-review).
+  comments are on (alpha.10 will show them always). To **suggest** instead of edit (Overleaf's track
+  changes), use the **Editing ▾ / Reviewing ▾** switch in the same file bar (or under **⋯**); it shows
+  only with both comment switches on and the project allowed to push (sync panel ▸ **Allow pushing**).
+  Details: [Overleaf guide](OVERLEAF.md#comments-and-review).
 - **Cite from Zotero.** Keep Zotero 7 running with "Allow other applications on this computer to
   communicate with Zotero" turned on (Zotero ▸ Settings ▸ Advanced), then type `\cite{` or use the
   **Zotero** panel on the left. Step by step: [Zotero guide](ZOTERO.md). Mendeley is planned for a
