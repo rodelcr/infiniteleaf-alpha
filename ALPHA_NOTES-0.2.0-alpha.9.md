@@ -6,7 +6,7 @@ This is the first collaborator release of this open access Latex/Overleaf API to
 InfiniteLeaf is a local, Overleaf-like LaTeX editor: your files stay in a folder on
 your disk, and it compiles with your own TeX install. This is the first internal alpha, unsigned, for a small group of colleagues. Expect rough edges, and please report them. These instructions are mostly written by Claude.
 
-**Downloads** (from the prerelease on the private `infiniteleaf-alpha` GitHub repo):
+**Downloads** (from the release on the public [`infiniteleaf-alpha`](https://github.com/rodelcr/infiniteleaf-alpha) GitHub repo):
 
 | File | For |
 |---|---|
@@ -16,7 +16,34 @@ your disk, and it compiles with your own TeX install. This is the first internal
 | `ALPHA_NOTES-0.2.0-alpha.9.md` | this file |
 
 What is in this alpha:
-- **New since alpha.1**
+- **New in alpha.9**
+  - **Draw a symbol, recognized by Detexify.** The Symbols panel now matches your drawing against
+    Detexify's real handwriting samples (about 1,100 symbols), by Daniel Kirsch
+    (https://detexify.kirelabs.org; code MIT, data ODbL). The first drawing loads its data (about 6 MB).
+  - **File ▸ Export for arXiv…**: checks the project against arXiv's rules (engine, file names,
+    figure formats, files outside the main folder, `.bbl` format, …), adds `00README.json` when arXiv
+    needs it, strips comments, test-compiles the zip the way arXiv does, and only then saves it.
+  - **File ▸ Download source (zip)…**: the project as it is, without build files or hidden folders.
+- **New in alpha.6 to alpha.8**
+  - **Several projects at once**: File ▸ New Window (⌘N), File ▸ New Tab (⌘T) or the **+** at the top
+    right. The projects you had open come back at the next launch (hold ⌥ while launching to skip that).
+  - **Several documents in one folder**, as on Overleaf: Recompile builds the open file when it is a
+    document of its own (it has `\documentclass`), otherwise the main document.
+  - **Files**: right-click a file in the tree for **Rename or move…** and **Move to Trash…**; references
+    to the old name (`\input`, `\includegraphics`, …) are listed for you to update. Build files
+    (`.aux`, `.log`, …) next to a `.tex` are hidden from the tree; Recompile ▾ ▸ **Clear build files**
+    empties the app's own build folder (`.lo/build`), keeping the PDF.
+  - **Sizes**: ⌘+ / ⌘− / ⌘0 make the whole window bigger or smaller (over the PDF they zoom the PDF
+    instead). Settings ▸ General ▸ Interface size and Settings ▸ Editor ▸ Editor font size.
+  - **PDF**: links in the PDF are clickable; the ⤓ button in the PDF toolbar saves a copy (**Download
+    PDF**); a PDF opened from the file tree has its own zoom.
+  - **Agents**: Settings ▸ Connections ▸ Agents (MCP) ▸ **Connect** sets up Claude Code, Codex or
+    Gemini CLI (or shows what to paste for others). An agent's edits to an open file are shown for
+    review (Accept / Revert, per change). Automatic sync never sends an agent's edit to Overleaf before
+    you have accepted or reviewed it.
+  - **Overleaf's TeX Live**: Settings ▸ Compile ▸ Overleaf's TeX Live; the Recompile menu tells you when
+    this Mac's TeX Live differs.
+- **New in alpha.1 to alpha.5**
   - **Overleaf sync**: open a project from Overleaf, bring coauthors' edits in, and send yours,
     automatically every few seconds if you want (see "Automatic sync with Overleaf" in section 4).
   - **Overleaf comments and review**: comments and suggestions beside the text, a new comment from a
@@ -41,7 +68,8 @@ What is in this alpha:
   - Word count (texcount) for the project and for a selection (⌘-Shift-c).
   - Paste a screenshot into a `.tex` file: it lands in `figures/` with an `\includegraphics` stub.
   - Figure freshness badges in the file tree.
-  - Symbols panel: find a symbol by command, keyword or Unicode character, or draw it.
+  - Symbols panel: find a symbol by command, keyword or Unicode character, or draw it (recognized
+    by Detexify).
   - Themes: six built-in themes (light and dark), a theme editor, VS Code theme import and a
     theme builder (from colors or an image). The theme picker is the gear at the bottom of the left rail.
 - **Compile and PDF**
@@ -54,7 +82,8 @@ What is in this alpha:
     longer than the time limit (default 10 min; Recompile ▾ → "Stop compile after") stops the
     compile. The log keeps the first error, and the banner offers "Allow longer".
   - Log pane with plain-language hints and quick-fixes, plus Code Check for unclosed environments.
-  - Checks panel (page limit, anonymization) and "Export for submission" (zip plus a test compile).
+  - Checks panel (page limit, anonymization), File ▸ "Export for submission…" (zip plus a test
+    compile) and File ▸ "Export for arXiv…" (see "New in alpha.9").
   - PDF viewer with zoom and fit, and an optional dark PDF display.
   - SyncTeX both ways: ⌘+⌥+J (source to PDF), double-click in the PDF (PDF to source),
     ⌘+⌥+Shift+J or the ← button (PDF reading position to source). PDF-to-source now lands
@@ -75,10 +104,14 @@ What is in this alpha:
   - "Different details" notes when your `.bib` entry differs from Zotero's. Updates are
     suggest-only: one entry per click, only the fields you tick, citekeys never changed.
 - **Agents (MCP)**
-  - A small MCP server on `127.0.0.1` lets an agent such as Claude Code read the app's state
-    and open files, compile or show a spot in the PDF. Agents cannot edit your text or push.
+  - A small MCP server on `127.0.0.1` lets an agent (Claude Code, Codex, Gemini CLI, …) read the
+    app's state, open files, compile or show a spot in the PDF. Through it an agent cannot edit your
+    text or push; a citation it proposes is a suggestion you insert yourself (unless you allow it in
+    the Agents settings). An agent run in the terminal edits files directly; open files then show its
+    changes for review.
+  - Set it up from Settings ▸ Connections ▸ Agents (MCP) ▸ **Connect**.
   - It is **on by default**. The first launch shows a one-time notice; **View ▸ Agent access (MCP)**
-    or Settings ▸ Connections ▸ Claude Code turns it off at any time. Each launch uses a new access token.
+    or Settings ▸ Connections ▸ Agents (MCP) turns it off at any time. Each launch uses a new access token.
 - **App log**
   - Errors, failed commands and error dialogs go to `~/Library/Logs/app.infiniteleaf.desktop/infiniteleaf.log`,
     with your home folder and project path redacted. Attaching it to a bug report helps.
@@ -108,8 +141,8 @@ What is in this alpha:
     If the app says "TeX not found", it names the missing tool.
 - **git**, version 2.25 or newer (2.39.1 or newer recommended). Needed for History.
   - Check: `git --version`. If macOS offers to install the Command Line Tools, accept.
-- **A GitHub account with access to the private `infiniteleaf-alpha` repository**, to download
-  releases and to file bug reports (section 8).
+- **A GitHub account** only if you want to file a bug report as a GitHub issue (section 8). Downloading
+  needs no account.
 
 **Optional**
 - **Zotero 7 or newer**: unlocks the citation panel and Zotero `\cite{` completion.
@@ -162,8 +195,8 @@ What is in this alpha:
 ### Automatic sync with Overleaf every few seconds
 Set this up once per project. Both directions are off until you turn them on.
 1. **Link the project.** Projects screen ▸ **Open from Overleaf…** (token, history folder, project address).
-2. **Allow pushing.** New links never push. Click the **Overleaf** chip in the top bar to open the sync
-   panel, then **Allow pushing**.
+2. **Allow pushing.** New links never push. Click the sync button in the top bar (it shows the state,
+   for example "● synced") to open the sync panel, then **Allow pushing**.
 3. **Choose how often.** In the same panel, **Sync with Overleaf every**: 1 second to 5 minutes
    (default 5 minutes). Short intervals apply only while the InfiniteLeaf window is in front; in the
    background it checks once a minute. Below 15 seconds Overleaf may ask the app to slow down, and the
@@ -179,7 +212,9 @@ Set this up once per project. Both directions are off until you turn them on.
 7. **Offline.** Edits wait and go out, after a merge, once you are back online.
 
 The panel's header shows "Live · every N s" while this is on. Comments in the margin are separate:
-Settings ▸ Connections ▸ Overleaf.
+Settings ▸ Connections ▸ Overleaf. Linking a project, syncing by hand and comments, step by step:
+[Overleaf guide](https://github.com/rodelcr/infiniteleaf-alpha/blob/main/OVERLEAF.md). Zotero:
+[Zotero guide](https://github.com/rodelcr/infiniteleaf-alpha/blob/main/ZOTERO.md).
 
 ## 5. Please try
 Each item: action, then what you should see. Tell us if anything differs.
@@ -191,7 +226,7 @@ Each item: action, then what you should see. Tell us if anything differs.
 6. **Inverse SyncTeX.** Double-click a paragraph in the PDF. The editor opens the right source file at that line.
 7. **Zoom.** Use the toolbar -/+, the percent menu (Fit page, Fit width), ⌘+= / ⌘+- / ⌘+0 over the PDF, or pinch. Pages stay sharp after you stop, and your place is kept after a recompile.
 8. **Detached PDF window.** Click Detach. A PDF window opens and the editor takes the full width. Recompile: the window reloads and keeps its page. Quit and relaunch: the window comes back at the same size and position (the app starts attached).
-9. **Export for submission.** Recompile menu ▸ "Export for submission...". The report shows a successful test compile and the page count. An undefined `\cite` key makes the export refuse and list the key.
+9. **Export for submission.** File ▸ "Export for submission…". The report shows a successful test compile and the page count. An undefined `\cite` key makes the export refuse and list the key.
 10. **Paste a screenshot.** Copy a screenshot, paste on an empty line in a `.tex` file. `figures/pasted-<date-time>.png` is created and an `\includegraphics` line is inserted.
 11. **Find and project search.** ⌘-f with a regex such as `a(\d)` replaced by `b$1`; ⌘-Shift-f for project-wide search. Clicking a hit selects the exact match.
 12. **Word count.** Select a paragraph, press ⌘-Shift-c. A tooltip shows the printed-word count.
@@ -200,8 +235,12 @@ Each item: action, then what you should see. Tell us if anything differs.
 15. **Zotero.** With Zotero running and the API enabled, type `\cite{` plus a few letters. Your `.bib` keys appear first, then Zotero items. Picking one appends exactly one entry to the `.bib`; the diff is only added lines at the end. Recompile: no undefined citations.
 16. **Themes.** Open the theme picker, edit a theme, change a color. The live preview updates; Cancel restores your theme. PDF pages are never recolored.
 17. **Engine choice.** In a copy of a paper that uses `fontspec`, compile without a `% !TEX program` line. The Recompile menu says XeLaTeX was chosen from the preamble.
-18. **Symbols.** Open the Symbols panel from the left rail, draw an integral sign or search "alpha", and insert it.
+18. **Symbols.** Open the Symbols panel from the left rail, draw an integral sign or search "alpha", and insert it. The first drawing takes a moment while Detexify's data loads; the credit line under the drawing area links to Detexify.
 19. **MCP switch.** On first launch a one-time notice explains the MCP server. Turn it off with **View ▸ Agent access (MCP)**, then on again.
+20. **Export for arXiv.** On a copy of a paper: File ▸ "Export for arXiv…". It either says "Ready for arXiv" (with any warnings) and saves a zip, or "Not ready for arXiv" with what to fix and no zip. Unzip it: no `.lo`, no comments, the `.bbl` beside the main file.
+21. **Several projects.** File ▸ New Window (⌘N) and File ▸ New Tab (⌘T): open a second project in each. Quit and relaunch: both come back.
+22. **Download PDF.** Click ⤓ in the PDF toolbar. A save dialog in Downloads offers a copy named after the project.
+23. **Interface size.** With the pointer over the editor or the top bar, press ⌘+ and ⌘−: everything grows and shrinks; ⌘0 resets. Over the PDF the same keys zoom the PDF only.
 
 ## 6. Known gaps and limitations
 **Not in this alpha**
@@ -220,7 +259,9 @@ Each item: action, then what you should see. Tell us if anything differs.
 - Closing the app when files changed on disk or a sync is pending can take a few seconds.
 - The "changed on disk" banner (Keep mine / Load disk version) appears if history or sync rewrites a file you are editing. The text you were holding is journaled for recovery until you choose.
 - A file with thousands of unclosed `{` switches the editor to basic highlighting ("Large or unusual file: using basic highlighting").
-- Detached PDF window: the app starts attached; a "no match" toast can cover the file bar for up to 4 s; there are no clickable PDF links.
+- Detached PDF window: the app starts attached; a "no match" toast can cover the file bar for up to 4 s.
+- Export for arXiv checks against arXiv's published rules and test-compiles with your TeX Live, not arXiv's; always look at the PDF arXiv makes before announcing. Nothing is uploaded by the app.
+- Mendeley is not connected yet (planned for a later alpha). For now, export a `.bib` from Mendeley and add it to the project.
 - "Compare as PDF" and remote sync need git, latexdiff and a working network or reachable remote as appropriate.
 
 ## 7. Your data
@@ -235,9 +276,9 @@ Each item: action, then what you should see. Tell us if anything differs.
     Zotero mirror and the MCP session file (`mcp/session.json`, readable only by you, new each
     launch): `~/Library/Application Support/app.infiniteleaf.desktop/` (see section 9).
   - The app log: `~/Library/Logs/app.infiniteleaf.desktop/` (paths redacted; 5 MB × 3 files).
-  - A GitHub token, if you connect one, is stored in the macOS Keychain (service `infiniteleaf`), never in a file.
+  - A GitHub token or an Overleaf Git token, if you connect one, is stored in the macOS Keychain (service `infiniteleaf`), never in a file.
   - Display preferences (theme choice, layout, PDF zoom) are in the app's web storage on this Mac.
-- **Nothing leaves your machine** except a bug report you choose to submit, and calls to a remote you set up yourself. Zotero and LanguageTool are reached only on the loopback address, and the MCP server listens only on `127.0.0.1` (turn it off with the MCP chip). There is **no telemetry** and no update check.
+- **Nothing leaves your machine** except a bug report you choose to submit, calls to a remote you set up yourself, and, for a project you link to Overleaf, its sync with Overleaf (and its comments, if you turn them on). Zotero and LanguageTool are reached only on the loopback address, and the MCP server listens only on `127.0.0.1` (turn it off with View ▸ Agent access (MCP)). There is **no telemetry** and no update check.
 - Still: it is an alpha. Work on a copy.
 
 ## 8. Reporting bugs
@@ -247,8 +288,8 @@ Each item: action, then what you should see. Tell us if anything differs.
   - your summary and description.
   - Paths are redacted: your home folder shows as `~`, the project root as relative, user names as `<user>`.
   - Two boxes are **off by default** because they can reveal paper content: the tail of the compile log, and the open file's name. Tick them only if you are comfortable.
-- "Open GitHub issue" launches a **prefilled issue on the private `infiniteleaf-alpha` repository** in your browser. Nothing is sent until you press Submit there. "Copy report" puts the Markdown on your clipboard instead.
-- You need a **GitHub account with access to `infiniteleaf-alpha`** (the dialog names the exact repository). You will be added as a collaborator; if the issue page shows 404, ask to be added.
+- "Open GitHub issue" launches a **prefilled issue on the public `infiniteleaf-alpha` repository** in your browser. Nothing is sent until you press Submit there, and a submitted issue is **public**. "Copy report" puts the Markdown on your clipboard instead (send it to Rodrigo directly if you prefer).
+- You need a **GitHub account** to submit an issue (the dialog names the exact repository).
 - Long reports (over about 7,500 bytes) are truncated in the URL: the full report is copied to your clipboard first, then the browser opens. Paste it into the issue.
 
 ## 9. Uninstalling
@@ -261,6 +302,6 @@ Quit the app, then:
      `mcp/` and `recovery/` (recovered unsaved text).
    - App log: `~/Library/Logs/app.infiniteleaf.desktop/`.
    - Web storage (theme, layout, zoom): most likely `~/Library/WebKit/app.infiniteleaf.desktop/`. Not yet confirmed on a release build.
-3. Keychain: if you connected GitHub, open Keychain Access and delete the entry with service `infiniteleaf`.
+3. Keychain: if you connected GitHub or Overleaf, open Keychain Access and delete the entries with service `infiniteleaf`.
 4. Your history: the central repository folder you chose (suggested name `InfiniteLeaf` in your home folder) is **not** removed automatically. Delete it only if you do not want the history.
 5. Inside each project you opened: the hidden `.lo/` folder can be deleted; it only holds build output and machine-local state. `.infiniteleaf/` holds the project's settings and word list; delete it only if you want those gone.
