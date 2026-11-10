@@ -1,0 +1,73 @@
+# Connecting InfiniteLeaf to Overleaf
+
+<!-- Assembled 2026-11-10 from ALPHA_NOTES-0.2.0-alpha.8.md (verbatim; selection only).
+     Sources: "What you need" = section 1 bullets "Overleaf sync" / "Overleaf comments and review";
+     steps 1-7 = section 4 "Automatic sync with Overleaf every few seconds".
+     "What you need", "Link a project" and "Turn comments on" written by Claude at Rodrigo's request
+     (2026-11-10, "you can write what we need as overviews"), from the app's own labels. -->
+
+Open a project from Overleaf, bring coauthors' edits in, and send yours, automatically.
+
+## What you need
+- **An Overleaf plan with Git integration.** InfiniteLeaf syncs through Overleaf's Git bridge, which
+  needs a paid Overleaf plan (or an institutional one that includes it).
+- **An Overleaf Git token.** In Overleaf: Account Settings ▸ Git integration ▸ create a token, then
+  copy it. InfiniteLeaf keeps it in the macOS Keychain, never in a file.
+- **Your Overleaf sign-in.** The app asks you to sign in to overleaf.com once, in a window of its own,
+  to read the project's name (and, if you turn them on, its comments).
+
+## Link a project
+Projects screen (or File) ▸ **Open from Overleaf…**. The dialog has four steps; each one unlocks when
+the one before is done.
+1. **Token.** Click **Add token…** and paste your Overleaf Git token.
+2. **History repo.** Click **Set up history…** and choose a folder for InfiniteLeaf's history
+   (`~/InfiniteLeaf` is suggested). Linked projects live there. Do not pick a folder inside iCloud
+   Drive, Google Drive, Dropbox or OneDrive; the app refuses them.
+3. **Project.** Paste the project's address from your browser (`https://www.overleaf.com/project/…`).
+   The dialog looks up the project's name on Overleaf. If it asks, click **Sign in to Overleaf…**, sign
+   in, and close that window. **Never push (read-only)** is ticked: the project only receives
+   Overleaf's changes until you allow pushing (step 2 below).
+4. **Open.** The app checks the token and the address, then opens the project (in a new window if
+   another project is already open). If the
+   project is already in InfiniteLeaf, the dialog offers **Open it** instead of making a second copy.
+
+Your project is now a folder on your disk that follows Overleaf. The **Overleaf** chip in the top bar
+shows its state; click it for the sync panel.
+
+## Automatic sync with Overleaf every few seconds
+Set this up once per project. Both directions are off until you turn them on.
+1. **Link the project.** Projects screen ▸ **Open from Overleaf…** (token, history folder, project address).
+2. **Allow pushing.** New links never push. Click the **Overleaf** chip in the top bar to open the sync
+   panel, then **Allow pushing**.
+3. **Choose how often.** In the same panel, **Sync with Overleaf every**: 1 second to 5 minutes
+   (default 5 minutes). Short intervals apply only while the InfiniteLeaf window is in front; in the
+   background it checks once a minute. Below 15 seconds Overleaf may ask the app to slow down, and the
+   panel then says "Overleaf asked us to slow down · next try …".
+4. **Bring coauthors' edits in.** Tick **Apply Overleaf changes automatically**.
+5. **Send your edits out.** Tick **Send my edits to Overleaf automatically**. Your edits go once you
+   have stopped typing for 10 seconds (or the interval, if longer). The app always takes Overleaf's
+   latest changes first, merges, then sends.
+6. **What waits for you.** Renaming or moving a file, reformatting a whole file, rewriting more than
+   30 % of a file at once, and deleting a file on Overleaf are not sent automatically. The panel says
+   "needs a look"; press **Review and push** for those. Everything else goes out on its own, as it would
+   in Overleaf's editor.
+7. **Offline.** Edits wait and go out, after a merge, once you are back online.
+
+The panel's header shows "Live · every N s" while this is on.
+
+## Comments and review
+- **Overleaf comments and review**: comments and suggestions beside the text, a new comment from a
+  selection, reply/resolve/accept, and actions made offline are sent when you reconnect.
+- **History with Overleaf**: Overleaf's versions and labels next to your own, labels on any earlier
+  version (also on Overleaf when the version matches exactly), compare with an Overleaf version.
+
+### Turn comments on
+Comments are off until you turn them on, in **Settings ▸ Connections ▸ Overleaf**:
+1. **Show Overleaf comments and suggestions** shows them in a margin beside your text, read-only.
+2. **Allow accepting, rejecting, resolving and replying on Overleaf from InfiniteLeaf** lets you act
+   on them (and add new comments). It needs the first switch on.
+
+Both use your overleaf.com sign-in. Overleaf's Git bridge does not carry comments, so these switches
+use Overleaf's own web interface instead. That is why the app labels them **unofficial**: Overleaf
+does not support this use, it may stop working whenever Overleaf changes its site, and Overleaf could
+restrict an account that uses it. Syncing your text does not depend on them.
