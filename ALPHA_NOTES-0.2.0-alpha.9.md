@@ -238,8 +238,11 @@ For a project linked to Overleaf. Off until you turn it on.
    **Accept all** / **Reject all**. A reject finishes with your next push.
 6. **New comment.** Select text in a `.tex` file: an **Add comment** button appears above it. Type the
    comment and press **Comment**.
-7. **Track changes.** The **Editing ▾ / Reviewing ▾** switch in the file bar turns Overleaf's track
-   changes on or off, as in Overleaf.
+7. **Suggesting (track changes).** The **Editing ▾ / Reviewing ▾** switch in the file bar turns
+   Overleaf's track changes on or off for you, as in Overleaf: in **Reviewing**, the edits you send to
+   Overleaf arrive there as suggestions your coauthors accept or reject. The switch shows only when **both** switches in step 1
+   are on **and** the project may push (sync panel ▸ **Allow pushing**; new links start read-only). Like
+   Review, it can be under **⋯** (More file actions) in a narrow window. alpha.10 will show it always.
 8. **Offline.** Actions you take offline wait ("Queued — sent when Overleaf answers") and go out when
    Overleaf answers again.
 
@@ -289,7 +292,7 @@ Each item: action, then what you should see. Tell us if anything differs.
 - A file with thousands of unclosed `{` switches the editor to basic highlighting ("Large or unusual file: using basic highlighting").
 - Detached PDF window: the app starts attached; a "no match" toast can cover the file bar for up to 4 s.
 - Export for arXiv checks against arXiv's published rules and test-compiles with your TeX Live, not arXiv's; always look at the PDF arXiv makes before announcing. Nothing is uploaded by the app.
-- The **Review** buttons (comments) are hidden until you turn comments on in Settings ▸ Connections ▸ Overleaf, and the file-bar one can sit under **⋯** (More file actions) in a narrow window. alpha.10 will show Review always, with a way to turn comments on from it.
+- The **Review** buttons (comments) are hidden until you turn comments on in Settings ▸ Connections ▸ Overleaf, and the file-bar one can sit under **⋯** (More file actions) in a narrow window. alpha.10 will show Review always, with a way to turn comments on from it. The **Editing ▾ / Reviewing ▾** (suggesting) switch is hidden the same way, and also until the project may push.
 - Mendeley is not connected yet (planned for a later alpha). For now, export a `.bib` from Mendeley and add it to the project.
 - "Compare as PDF" and remote sync need git, latexdiff and a working network or reachable remote as appropriate.
 
