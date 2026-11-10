@@ -1,12 +1,12 @@
 # InfiniteLeaf alpha
 
-## Download the latest alpha (0.2.0-alpha.8)
+## Download the latest alpha (0.2.0-alpha.9)
 
-- **[Apple Silicon Macs (M1 or later)](https://github.com/rodelcr/infiniteleaf-alpha/releases/download/v0.2.0-alpha.8/InfiniteLeaf-0.2.0-alpha.8-aarch64.dmg)**
-- [Intel Macs](https://github.com/rodelcr/infiniteleaf-alpha/releases/download/v0.2.0-alpha.8/InfiniteLeaf-0.2.0-alpha.8-x86_64.dmg)
+- **[Apple Silicon Macs (M1 or later)](https://github.com/rodelcr/infiniteleaf-alpha/releases/download/v0.2.0-alpha.9/InfiniteLeaf-0.2.0-alpha.9-aarch64.dmg)**
+- [Intel Macs](https://github.com/rodelcr/infiniteleaf-alpha/releases/download/v0.2.0-alpha.9/InfiniteLeaf-0.2.0-alpha.9-x86_64.dmg)
 
 Which Mac do I have? Apple menu ▸ About This Mac: "Chip: Apple M…" is Apple Silicon.
-Install steps and what to try: [tester notes](ALPHA_NOTES-0.2.0-alpha.8.md).
+Install steps and what to try: [tester notes](ALPHA_NOTES-0.2.0-alpha.9.md).
 All releases: [Releases](https://github.com/rodelcr/infiniteleaf-alpha/releases).
 Connect to Overleaf: [Overleaf guide](OVERLEAF.md). Connect to Zotero: [Zotero guide](ZOTERO.md).
 
