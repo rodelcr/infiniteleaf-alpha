@@ -83,21 +83,27 @@ For a project linked to Overleaf. Off until you turn it on.
    review**; sign in there, then press **Check now**.
 3. **See the comments.** Click **Review**. It is in the file bar above the editor, on the right; when
    the window is narrow it is tucked under the **⋯** button (More file actions) at the right end of
-   that bar. **Review** on the left rail opens the same margin on its Overview tab. Both appear only
-   after step 1, and only in a project linked to Overleaf (alpha.10 will show them always).
+   that bar (the **⋯** then shows a dot). **Review** on the left rail opens the same margin on its
+   Overview tab. Until step 1 is done, or in a project not linked to Overleaf, both are greyed out:
+   click one and it says what is missing, with a button that takes you there.
    A margin opens beside the text: **Current file** shows each comment level with the text it is on;
    **Overview** lists every file's comments and suggestions (click one to jump there). **Check now**
    reads Overleaf again; otherwise it refreshes with the sync interval.
 4. **Reply and resolve.** Click a comment's card: type in **Reply** (Enter sends, Shift+Enter is a new
    line) or press **Resolve**. Resolved comments are under **Resolved (N)** at the bottom, with **Reopen**.
+   **Edit or delete your own:** a message's **⋯** menu has **Edit** (Save / Cancel; ⌘Enter saves, Esc
+   cancels) and **Delete**. Delete on the first message of a thread you started removes the whole
+   thread, after you confirm, as on Overleaf; resolved threads you started can be deleted from
+   **Resolved (N)**. Other people's messages cannot be edited or deleted from InfiniteLeaf.
 5. **Suggestions (tracked changes).** Each one has **Accept** and **Reject**; a group has
    **Accept all** / **Reject all**. A reject finishes with your next push.
 6. **New comment.** Select text in a `.tex` file: an **Add comment** button appears above it. Type the
    comment and press **Comment**.
 7. **Suggesting (track changes).** The **Editing ▾ / Reviewing ▾** switch in the file bar turns
    Overleaf's track changes on or off for you, as in Overleaf: in **Reviewing**, the edits you send to
-   Overleaf arrive there as suggestions your coauthors accept or reject. The switch shows only when **both** switches in step 1
-   are on **and** the project may push (sync panel ▸ **Allow pushing**; new links start read-only). Like
-   Review, it can be under **⋯** (More file actions) in a narrow window. alpha.10 will show it always.
+   Overleaf arrive there as suggestions your coauthors accept or reject. The switch works only when **both** switches in step 1
+   are on **and** the project may push (sync panel ▸ **Allow pushing**; new links start read-only), and
+   you are signed in. Otherwise it is greyed out; click it to see what is missing and go fix it. Like
+   Review, it can be under **⋯** (More file actions) in a narrow window.
 8. **Offline.** Actions you take offline wait ("Queued — sent when Overleaf answers") and go out when
    Overleaf answers again.
