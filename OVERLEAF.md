@@ -55,14 +55,19 @@ Set this up once per project. Both directions are off until you turn them on.
    background it checks once a minute. Below 15 seconds Overleaf may ask the app to slow down, and the
    panel then says "Overleaf asked us to slow down · next try …".
 4. **Bring coauthors' edits in.** Tick **Apply Overleaf changes automatically**.
-5. **Send your edits out.** Tick **Send my edits to Overleaf automatically**. Your edits go once you
-   have stopped typing for 10 seconds (or the interval, if longer). The app always takes Overleaf's
-   latest changes first, merges, then sends.
+5. **Send your edits out.** Tick **Send my edits to Overleaf automatically**, then choose **Send my edits
+   every**: 5 s, 15 s, 30 s, or 1 to 15 min (default 5 min). Short settings feel as live as Overleaf
+   but add more entries to Overleaf's history. Your edits also go right away when you compile, close the
+   project or quit. The app always takes Overleaf's latest changes first, merges, then sends.
 6. **What waits for you.** Renaming or moving a file, reformatting a whole file, rewriting more than
    30 % of a file at once, and deleting a file on Overleaf are not sent automatically. The panel says
    "needs a look"; press **Review and push** for those. Everything else goes out on its own, as it would
-   in Overleaf's editor.
+   in Overleaf's editor. Only adding text (for example new `.bib` entries) is never held, however big.
 7. **Offline.** Edits wait and go out, after a merge, once you are back online.
+8. **While you type.** A coauthor's change to the file you have open merges into your text as you work,
+   with no prompt (one ⌘Z removes it). If you both changed the same lines, a card at that place offers
+   **Use mine / Use theirs / Keep both**. Choosing yours over theirs holds that file for your review
+   before anything is sent, so a coauthor's text is never undone on Overleaf without you seeing it.
 
 The panel's header shows "Live · every N s" while this is on.
 
@@ -81,10 +86,9 @@ For a project linked to Overleaf. Off until you turn it on.
 2. **Sign in to overleaf.com once**, in the app's own window: Settings ▸ Connections ▸ Overleaf ▸
    **Browse Overleaf…**. If you are not signed in, the margin says so and offers **Open Overleaf
    review**; sign in there, then press **Check now**.
-3. **See the comments.** Click **Review**. It is in the file bar above the editor, on the right; when
-   the window is narrow it is tucked under the **⋯** button (More file actions) at the right end of
-   that bar (the **⋯** then shows a dot). **Review** on the left rail opens the same margin on its
-   Overview tab. Until step 1 is done, or in a project not linked to Overleaf, both are greyed out:
+3. **See the comments.** Click **Review**. It is in the file bar above the editor, on the right, and
+   always stays there (in a narrow window the file name shortens instead). **Review** on the left rail
+   opens the same margin on its Overview tab. Until step 1 is done, or in a project not linked to Overleaf, both are greyed out:
    click one and it says what is missing, with a button that takes you there.
    A margin opens beside the text: **Current file** shows each comment level with the text it is on;
    **Overview** lists every file's comments and suggestions (click one to jump there). **Check now**
@@ -103,7 +107,8 @@ For a project linked to Overleaf. Off until you turn it on.
    Overleaf's track changes on or off for you, as in Overleaf: in **Reviewing**, the edits you send to
    Overleaf arrive there as suggestions your coauthors accept or reject. The switch works only when **both** switches in step 1
    are on **and** the project may push (sync panel ▸ **Allow pushing**; new links start read-only), and
-   you are signed in. Otherwise it is greyed out; click it to see what is missing and go fix it. Like
-   Review, it can be under **⋯** (More file actions) in a narrow window.
+   you are signed in. Otherwise it is greyed out; click it to see what is missing and go fix it.
+   Pushing in **Reviewing** needs that overleaf.com sign-in too (Overleaf has to turn track changes on
+   first); if it has lapsed, the push stops and offers **Sign in to Overleaf…**, then press Push again.
 8. **Offline.** Actions you take offline wait ("Queued — sent when Overleaf answers") and go out when
    Overleaf answers again.
