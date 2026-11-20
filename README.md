@@ -1,12 +1,12 @@
 # InfiniteLeaf alpha
 
-## Download the latest alpha (0.2.0-alpha.10)
+## Download the latest alpha (0.2.0-alpha.11)
 
-- **[Apple Silicon Macs (M1 or later)](https://github.com/rodelcr/infiniteleaf-alpha/releases/download/v0.2.0-alpha.10/InfiniteLeaf-0.2.0-alpha.10-aarch64.dmg)**
-- [Intel Macs](https://github.com/rodelcr/infiniteleaf-alpha/releases/download/v0.2.0-alpha.10/InfiniteLeaf-0.2.0-alpha.10-x86_64.dmg)
+- **[Apple Silicon Macs (M1 or later)](https://github.com/rodelcr/infiniteleaf-alpha/releases/download/v0.2.0-alpha.11/InfiniteLeaf-0.2.0-alpha.11-aarch64.dmg)**
+- [Intel Macs](https://github.com/rodelcr/infiniteleaf-alpha/releases/download/v0.2.0-alpha.11/InfiniteLeaf-0.2.0-alpha.11-x86_64.dmg)
 
 Which Mac do I have? Apple menu ▸ About This Mac: "Chip: Apple M…" is Apple Silicon.
-Install steps and what to try: [tester notes](ALPHA_NOTES-0.2.0-alpha.10.md).
+Install steps and what to try: [tester notes](ALPHA_NOTES-0.2.0-alpha.11.md).
 All releases: [Releases](https://github.com/rodelcr/infiniteleaf-alpha/releases).
 Connect to Overleaf: [Overleaf guide](OVERLEAF.md). Connect to Zotero: [Zotero guide](ZOTERO.md).
 
@@ -40,19 +40,19 @@ is easiest. `git` is needed for version control; if macOS offers to install the 
 - **See and answer Overleaf comments.** Comments are off until you turn them on: Settings (⌘,) ▸
   Connections ▸ Overleaf ▸ tick **Show Overleaf comments and suggestions** (and, to reply, resolve and
   accept, **Allow accepting, rejecting, resolving and replying…**). Then click **Review** in the file
-  bar above the editor. In a narrow window it is under the **⋯** button (More file actions) at the
-  right end of that bar; **Review** on the left rail opens the overview. Until comments are on they
-  are greyed out: click one and it says what is missing, with a button that takes you there. Edit or
+  bar above the editor (it always stays there); **Review** on the left rail opens the overview. Until
+  comments are on they are greyed out: click one and it says what is missing, with a button that takes
+  you there. Edit or
   delete your own comments from a message's **⋯** menu. To **suggest** instead of edit (Overleaf's track
-  changes), use the **Editing ▾ / Reviewing ▾** switch in the same file bar (or under **⋯**); it shows
+  changes), use the **Editing ▾ / Reviewing ▾** switch in the same file bar; it works
   only with both comment switches on and the project allowed to push (sync panel ▸ **Allow pushing**).
   Details: [Overleaf guide](OVERLEAF.md#comments-and-review).
 - **Cite from Zotero.** Keep Zotero 7 running with "Allow other applications on this computer to
   communicate with Zotero" turned on (Zotero ▸ Settings ▸ Advanced), then type `\cite{` or use the
   **Zotero** panel on the left. Step by step: [Zotero guide](ZOTERO.md).
-- **Use your Mendeley library.** Export it from Mendeley Reference Manager as BibTeX, then Settings ▸
-  Connections ▸ **Mendeley (BibTeX library file)** ▸ **Choose library file…**; search, `\cite{` and
-  Cite then work as with Zotero. Step by step: [Mendeley guide](MENDELEY.md).
+- **Use your Mendeley library.** Settings ▸ Connections ▸ Mendeley ▸ **Connect**, then sign in to
+  Elsevier in your browser: search, `\cite{` and Cite then work as with Zotero, and the library stays up
+  to date by itself. Step by step: [Mendeley guide](MENDELEY.md).
 - **Use an AI agent.** Click **Terminal** on the left (or press Ctrl+\`): a shell opens in the
   project folder, where you can run your own agent (Claude Code, Codex, Gemini CLI, …) on the
   project's files. To let the agent also see the app (open files, compile, show a spot in the PDF),
@@ -65,7 +65,7 @@ is easiest. `git` is needed for version control; if macOS offers to install the 
   LaTeX commands appear below it, ready to insert. The recognition comes from
   [Detexify](https://detexify.kirelabs.org) by Daniel Kirsch.
 
-More to try, and what you should see: [tester notes](ALPHA_NOTES-0.2.0-alpha.10.md).
+More to try, and what you should see: [tester notes](ALPHA_NOTES-0.2.0-alpha.11.md).
 
 ## Key features
 InfiniteLeaf is a local, Overleaf-like LaTeX editor: your files stay in a folder on
